@@ -22,12 +22,15 @@ const parentList = [
 
 ]
 
-function getParent(list, children){
-  return
+
+function getParent(children){
+  const parent = parentList.find(function(parent){
+    return parent.children === children;
+  })
+
+  return parent.name
 }
+console.log(getParent('Samira'));
 
-const parent = getParent(parentList, 'Pedro')
-
-console.log(parent)
 
 //a função deve retornar o nome do pai de acordo com o nome de seu filho passado no segundo parâmetro 
